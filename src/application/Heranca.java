@@ -13,13 +13,13 @@ public class Heranca {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        ContaHeranca acc = new ContaHeranca(1001, "Alex", 0.0);
+        ContaHeranca acc = new ContaHeranca(1001, "Alex", 500.00);
         ContaEmpresaHeranca bacc = new ContaEmpresaHeranca(1002, "maria", 0.0, 500.00);
 
         //UPCASTING - EX: pegar objeto do tipo ContaEmpresa e atribuir pra uma variável do tipo Conta herança
         ContaHeranca acc1 = bacc;
         ContaHeranca acc2 = new ContaEmpresaHeranca(1003, "bob", 0.0, 400.00);
-        ContaHeranca acc3 = new ContaPoupanca(1004, "ana", 0.0, 300.00);
+        ContaHeranca acc3 = new ContaPoupanca(1004, "ana", 300.00, 0.0);
 
         //DOWNCASTING - aqui o casting deve ser manual
         ContaEmpresaHeranca acc4 = (ContaEmpresaHeranca) acc2;
@@ -37,11 +37,12 @@ public class Heranca {
             System.out.println("Update!");
         }
 
+        acc.withdraw(200.0);
+        System.out.println(acc.getBalance());
 
+        acc3.withdraw(100.00);
+        System.out.println(acc3.getBalance());
 
-
-
-
-
+        sc.close();
     }
 }

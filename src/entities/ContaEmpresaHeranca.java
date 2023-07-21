@@ -27,6 +27,10 @@ public class ContaEmpresaHeranca extends ContaHeranca {
         }
     }
 
-
+    @Override
+    public void withdraw(double amount) {
+        super.withdraw(amount); //uso da palavra super, chamando o metodo da superclasse
+        balance -= 2.0;
+    }
 
 }

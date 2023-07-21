@@ -1,6 +1,6 @@
 package entities;
 
-public class ContaPoupanca extends ContaHeranca {
+public final class ContaPoupanca extends ContaHeranca {
 
     private Double interestRate;
 
@@ -24,4 +24,11 @@ public class ContaPoupanca extends ContaHeranca {
     public void updateBalance() {
         balance += balance * interestRate;
     }
+
+    //Sobreposição de método, adicinando diferença no saque da conta poupança
+    @Override
+    public final void withdraw(double amount) {
+        balance -= amount;
+    }
+
 }
