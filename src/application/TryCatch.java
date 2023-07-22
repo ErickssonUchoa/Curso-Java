@@ -8,12 +8,18 @@ public class TryCatch {
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in);
 
+        methodException();
+
+    }
+
+    public static void methodException() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("---Start---");
         try {
-            String[] vect = sc.nextLine().split(" ");
+            String[] vector = sc.nextLine().split(" ");
             int position = sc.nextInt();
-            System.out.println(vect[position]);
+            System.out.println(vector[position]);
         }
         catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid position!");
@@ -21,8 +27,10 @@ public class TryCatch {
         catch (InputMismatchException e) {
             System.out.println("Input error!");
         }
-
-        System.out.println("End of program!");
+        finally {
+            System.out.println("End of program!");
+        }
+        System.out.println("---End---");
         sc.close();
     }
 }
