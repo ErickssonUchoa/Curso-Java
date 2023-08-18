@@ -29,6 +29,7 @@ public class Produto {
         System.out.print("Enter the number of products to be removed from stock:");
         quantity = sc.nextInt();
         product.removeProducts(quantity);
+        System.out.println("Updated data: " + product);
 
         sc.close();
     }
