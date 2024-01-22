@@ -23,7 +23,7 @@ public class ExMap {
         System.out.println("Get: " + cookies.get("email"));
         System.out.println("Size: " + cookies.size());
 
-        System.out.println("---------- DADOS ----------");
+        System.out.println("----------- DADOS -----------");
         for (String key: cookies.keySet()) {
             System.out.println(key + ": " + cookies.get(key));
         }
@@ -31,7 +31,7 @@ public class ExMap {
         for (String value : cookies.values()) {
             System.out.println(value);
         }
-        
+
         sc.close();
     }
 }
